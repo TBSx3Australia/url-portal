@@ -8,7 +8,7 @@ const Item = props => (
     <td>
       <a href={`https://talent.tbsx3.com/task/${props.item.short}`}>{`https://talent.tbsx3.com/task/${props.item.short}`}</a>
     </td>
-    <td>{props.item.email || 'anonymous'}</td>
+    <td>{`${props.item.email.substring(0, 3)}***` || 'anonymous'}</td>
     <td>{props.item.url}</td>
   </tr>
 )

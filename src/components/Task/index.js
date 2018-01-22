@@ -24,7 +24,7 @@ class Task extends Component {
       },
       then(res) {
         this.setState({ loading: false, link: res.url })
-        base.update(`urls/${res.key}`, { data: { click: res.click + 1 } })
+        base.update(`urls/${res.key}`, { data: { count: res.count + 1 } })
         if (moment(res.end).isAfter(moment())) {
           window.location.assign(res.url)
         } else {

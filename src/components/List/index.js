@@ -22,6 +22,7 @@ class List extends Component {
       context: this,
       state: 'urls',
       asArray: true,
+      keepKeys: true,
       then() {
         this.setState({ loading: false })
       },
@@ -83,10 +84,10 @@ class List extends Component {
             <thead>
               <tr>
                 <th>Clicks</th>
-                <th>Expire Date</th>
+                <th>Expire</th>
                 <th>Unique Link</th>
-                <th>Candidate Email</th>
-                <th>Original Link</th>
+                <th>Candidate</th>
+                <th>Original</th>
               </tr>
             </thead>
 
