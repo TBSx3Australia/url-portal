@@ -23,9 +23,10 @@ class Task extends Component {
         equalTo: this.props.match.params.uid,
       },
       then(res) {
-        this.setState({ loading: false, link: res.url })
+        this.setState({ loading: false })
         base.update(`urls/${res.key}`, { data: { count: res.count + 1 } })
         if (moment(res.end).isAfter(moment())) {
+          this.setState({ link: res.url })
           window.location.assign(res.url)
         } else {
           console.error('expired')
