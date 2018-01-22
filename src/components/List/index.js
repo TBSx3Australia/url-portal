@@ -33,15 +33,17 @@ class List extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
+    const id = uuid()
 
     this.setState(prev => ({
       email: '',
       url: '',
       urls: prev.urls.concat([
         {
+          key: id,
           url: prev.url,
           email: prev.email,
-          short: uuid(),
+          short: id,
           end: moment()
             .add(90, 'hours')
             .toString(),
