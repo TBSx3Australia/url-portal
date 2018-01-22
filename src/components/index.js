@@ -1,9 +1,11 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import App from './App'
-import List from './List'
-import Task from './Task'
+import asyncComponent from './AsyncComponent'
+
+const App = asyncComponent(() => import('./App'))
+const List = asyncComponent(() => import('./List'))
+const Task = asyncComponent(() => import('./Task'))
 
 const Main = () => (
   <main>
