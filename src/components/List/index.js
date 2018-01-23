@@ -44,7 +44,6 @@ class List extends Component {
           key: id,
           url: prev.url,
           email: prev.email,
-          short: id,
           end: moment()
             .add(90, 'hours')
             .toString(),
@@ -91,7 +90,7 @@ class List extends Component {
               </tr>
             </thead>
 
-            <tbody>{this.state.urls.map(item => <Item key={item.short} item={item} />)}</tbody>
+            <tbody>{this.state.urls.map(item => <Item key={item.key} item={item} />)}</tbody>
           </table>
         )}
       </div>

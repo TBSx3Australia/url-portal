@@ -18,10 +18,6 @@ class Task extends Component {
   componentDidMount() {
     base.fetch(`urls/${this.props.match.params.uid}`, {
       context: this,
-      query: {
-        orderByChild: 'short',
-        equalTo: this.props.match.params.uid,
-      },
       then(res) {
         this.setState({ loading: false })
         base.update(`urls/${res.key}`, { data: { count: res.count + 1 } })
