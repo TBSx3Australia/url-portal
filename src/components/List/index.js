@@ -45,7 +45,7 @@ class List extends Component {
           url: prev.url,
           email: prev.email,
           end: moment()
-            .add(90, 'hours')
+            .add(7, 'days')
             .toString(),
           count: 0,
         },
@@ -89,8 +89,9 @@ class List extends Component {
                 <th>Original</th>
               </tr>
             </thead>
-
-            <tbody>{this.state.urls.map(item => <Item key={item.key} item={item} />)}</tbody>
+            <tbody>
+              {this.state.urls.sort((a, b) => moment(a.end) < moment(b.end)).map(item => <Item key={item.key} item={item} />)}
+            </tbody>
           </table>
         )}
       </div>

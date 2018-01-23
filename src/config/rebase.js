@@ -7,7 +7,7 @@ const data = {
   databaseURL: `https://${process.env.REACT_APP_FIREBASE_PROJECT}.firebaseio.com`,
   projectId: process.env.REACT_APP_FIREBASE_PROJECT,
   storageBucket: `${process.env.REACT_APP_FIREBASE_PROJECT}.appspot.com`,
-  messagingSenderId: process.env.REACT_APP_MESSEGE_ID,
+  messagingSenderId: process.env.REACT_APP_MESSAGE_ID,
 }
 
 const app = firebase.initializeApp(data)
