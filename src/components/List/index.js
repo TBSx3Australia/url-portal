@@ -61,7 +61,7 @@ class List extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="App-title">Welcome to TBSx3 Talent Portal</h1>
+        <h1 className="App-title">Welcome to {process.env.REACT_APP_TITLE}</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
             URL:
