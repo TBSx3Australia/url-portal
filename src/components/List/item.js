@@ -8,7 +8,7 @@ const Item = props => (
     <td>
       <a href={`https://${process.env.REACT_APP_DOMAIN}/t/${props.item.key}`}>{`https://${process.env.REACT_APP_DOMAIN}/t/${props.item.key}`}</a>
     </td>
-    <td>{`${props.item.email.substring(0, 3)}@@@${props.item.email.substring(props.item.email.length - 3, props.item.email.length)}` || 'anonymous'}</td>
+    <td>{`${props.item.email.substring(0, 6)}@${props.item.email.substring(props.item.email.length - 3, props.item.email.length)}` || 'anonymous'}</td>
     <td>{props.item.url}</td>
   </tr>
 )
